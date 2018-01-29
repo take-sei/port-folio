@@ -20,3 +20,11 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+
+## Info
+### cool design pages
+- <http://www.jojodesign.jp/>
+- <https://hasegawahiroshi.jp/>
+
+### Element, vuejs component lib
+- <http://element.eleme.io/#/en-US>
