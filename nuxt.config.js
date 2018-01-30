@@ -22,7 +22,9 @@ module.exports = {
    */
 
   build: {
-    vendor: ['element-ui'],
+    vendor: [
+      'element-ui',
+    ],
     /*
      ** Run ESLint on save
      */
@@ -39,7 +41,7 @@ module.exports = {
   },
 
   plugins: [
-    '@plugins/element-ui'
+    '@plugins/element-ui',
   ],
 
   css: [
