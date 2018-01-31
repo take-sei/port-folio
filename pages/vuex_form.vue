@@ -2,8 +2,7 @@
 div
   p form page
   HeadComp
-  TextareaComp
-  StringComp
+  component(:is="isComponent")
   button(v-on:click="buttonAction") {{button}}
 </template>
 
@@ -17,7 +16,8 @@ export default {
   name: 'form',
   methods: mapActions("Form", {"buttonAction": "buttonAction"}),
   computed: mapGetters('Form', {
-    'button': 'getButton'
+    'button': 'getButton',
+    "isComponent": "getComponent"
       }),
   components: {
     HeadComp,
