@@ -2,12 +2,19 @@ import Vuex from "vuex"
 
 const Form = {
   namespaced: true,
-  state: {},
+  state: {
+    button: ["確認", "送信"],
+  },
   mutations: {},
   actions: {
     buttonAction({commit, state, rootState}) {
       console.log("buttonAction")
       commit("setStepCount", null, {root: true})
+    }
+  },
+  getters: {
+    getButton (state, getters, rootState){
+      return state.button[rootState.stepCount]
     }
   }
 }
