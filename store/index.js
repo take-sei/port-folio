@@ -1,4 +1,5 @@
 import Vuex from "vuex"
+import Thanks from "@/pages/modules/vuex_thanks"
 
 const Form = {
   namespaced: true,
@@ -12,6 +13,9 @@ const Form = {
       console.log("buttonAction")
       if(rootState.errorFlag) {
         commit("setStepCount", null, {root: true})
+      }
+      if(rootState.stepCount == 2) {
+        router.push("thanks")
       }
     }
   },
