@@ -4,17 +4,23 @@ const Form = {
   namespaced: true,
   state: {
     button: ["確認", "送信"],
+    component: ["TextareaComp", "StringComp"]
   },
   mutations: {},
   actions: {
     buttonAction({commit, state, rootState}) {
       console.log("buttonAction")
-      commit("setStepCount", null, {root: true})
+      if(rootState.errorFlag) {
+        commit("setStepCount", null, {root: true})
+      }
     }
   },
   getters: {
     getButton (state, getters, rootState){
       return state.button[rootState.stepCount]
+    },
+    getComponent(state, getters, rootState) {
+      return state.component[rootState.stepCount]
     }
   }
 }
@@ -28,6 +34,15 @@ const Head = {
   getters: {
     getTitle (state, getters, rootState){
       return state.title[rootState.stepCount]
+    }
+  }
+}
+
+const String = {
+  namespaced: true, // enable name space
+  getters: {
+    getString(state, getters, rootState) {
+      return rootState.impression
     }
   }
 }
@@ -71,7 +86,8 @@ const store = () => new Vuex.Store({
   modules:{
     Form,
     Head,
-    Textarea
+    Textarea,
+    String
   }
 })
 
