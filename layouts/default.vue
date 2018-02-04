@@ -1,14 +1,32 @@
-<template>
-  <div>
-    <nuxt/>
-  </div>
+<template lang="pug">
+div
+  NavigationHeader
+  NavigationDrawer
+  div
+    nuxt
+    NavigationFooter
 </template>
 
-<style>
+<script>
+import NavigationHeader from "../components/NavigationHeader"
+import NavigationDrawer from "../components/NavigationDrawer"
+import NavigationFooter from "../components/NavigationFooter"
+
+export default {
+  components: {
+    NavigationHeader,
+    NavigationDrawer,
+    NavigationFooter
+  }
+}
+
+</script>
+
+<style lang="scss">
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
+font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+font-size: 16px;
+word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
