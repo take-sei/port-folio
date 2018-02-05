@@ -2,7 +2,7 @@
 header
   div
     span
-      img(src="~/static/logo.svg")
+      img(src="~/static/logo.svg", width="3%", height="3%")
 </template>
 
 <script>
